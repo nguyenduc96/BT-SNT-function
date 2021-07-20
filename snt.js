@@ -28,7 +28,7 @@ function isPrime(number) {
 }
 function reSult() {
     let num = document.getElementById('input').value;
-    let sNt = isPrime(num);
-    document.getElementById('output').innerHTML = sNt;
+    let checkPrime = isPrime(num);
+    document.getElementById('output').innerHTML = checkPrime;
 }
 
