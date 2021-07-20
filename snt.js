@@ -1,30 +1,34 @@
-function soNguyento(num) {
-    let n=2;
-    let count=0;
-    var array = [];
-    if (num<=0){
-        return  "Hãy nhập vào số dương";
+function isPrime(number) {
+    if (number<=0){
+        return  "Đây không phải số nguyên tố. Hãy nhập vào số dương";
+    }
+    else if (number == 1){
+        return  1 + " không phải số nguyên tố";
+    }
+    else if (number > 10000){
+        return "Số bạn nhập lơn hơn 10000";
     }
     else {
-        while (num){
+        while (number){
             let flag = true;
-            for (let i =2;i <= Math.sqrt(n); i++){
-                if (n%i == 0){
-                    flag=false;
+            for (let i =2;i <= Math.sqrt(number); i++){
+                if (number % i == 0){
+                    flag = false;
+                    return number + " không là số nguyên tố"
                     break;
                 }
             }
             if (flag == true){
-                count++;
-                array.push(n);
-            }
-            if (count >= num){
+                return number + " là số nguyên tố";
                 break;
+
             }
-            n++;
         }
     }
-    return array.toString();
 }
-let sNt = soNguyento(100);
-console.log(sNt);
+function reSult() {
+    let num = document.getElementById('input').value;
+    let sNt = isPrime(num);
+    document.getElementById('output').innerHTML = sNt;
+}
+
