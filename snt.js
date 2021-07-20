@@ -1,12 +1,6 @@
 function isPrime(number) {
-    if (number<=0){
-        return  "Đây không phải số nguyên tố. Hãy nhập vào số dương";
-    }
-    else if (number == 1){
-        return  1 + " không phải số nguyên tố";
-    }
-    else if (number > 10000){
-        return "Số bạn nhập lơn hơn 10000";
+    if (number<=1){
+        return  "Đây không phải số nguyên tố.";
     }
     else {
         while (number){
